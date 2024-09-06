@@ -10,7 +10,7 @@ const EditPost = () => {
 
   useEffect(() => {
     const fetchPost = async () => {
-      const response = await axios.get(`http://localhost:3000/api/posts/${id}`);
+      const response = await axios.get(`https://blog-app-backend-nghg.onrender.com/api/posts/${id}`);
       setTitle(response.data.title);
       setContent(response.data.content);
     };
@@ -20,7 +20,7 @@ const EditPost = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/api/posts/${id}`, {
+      await axios.put(`https://blog-app-backend-nghg.onrender.com/api/posts/${id}`, {
         title,
         content,
       });

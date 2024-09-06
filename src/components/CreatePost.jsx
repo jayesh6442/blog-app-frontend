@@ -10,7 +10,10 @@ const CreatePost = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/api/posts", { title, content });
+      await axios.post("https://blog-app-backend-nghg.onrender.com/api/posts", {
+        title,
+        content,
+      });
       navigate("/");
     } catch (error) {
       console.error("Error creating post:", error);

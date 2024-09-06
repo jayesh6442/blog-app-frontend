@@ -7,7 +7,9 @@ const PostList = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await axios.get("http://localhost:3000/api/posts");
+      const response = await axios.get(
+        "https://blog-app-backend-nghg.onrender.com/api/posts"
+      );
       setPosts(response.data);
     };
     fetchPosts();

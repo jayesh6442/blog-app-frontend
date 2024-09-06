@@ -9,14 +9,18 @@ const PostDetails = () => {
 
   useEffect(() => {
     const fetchPost = async () => {
-      const response = await axios.get(`http://localhost:3000/api/posts/${id}`);
+      const response = await axios.get(
+        `https://blog-app-backend-nghg.onrender.com/api/posts/${id}`
+      );
       setPost(response.data);
     };
     fetchPost();
   }, [id]);
 
   const deletePost = async () => {
-    await axios.delete(`http://localhost:3000/api/posts/${id}`);
+    await axios.delete(
+      `https://blog-app-backend-nghg.onrender.com/api/posts/${id}`
+    );
     navigate("/");
   };
 
